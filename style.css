@@ -1,0 +1,277 @@
+*{
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+body{
+    font-family: Arial; 
+     background:white;
+}
+.header{
+    padding: 10px;
+    /* căn giữa */
+    text-align: center;
+    color:#25287b;
+    background-image: url(image/Thiet-ke-chua-co-ten.png.webp);
+}
+
+.menu{
+    /* ẩn khi vượt quá kích thước */
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+}
+.menu ul li{
+    text-align: center;
+    margin-left: 5px;
+    padding: 0px;
+    /* tạo khối theo chiều ngang */
+    display:block;
+}
+.menu a{
+    margin-left: 20px;
+    /* đặt bên trái cha */
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    /* xoá gạch chân */
+    text-decoration: none;
+    /* animasion đổi nút chọn trang chủ, mua sắm */
+    cursor:pointer;
+    position:relative;
+    padding:5px 5px;
+    font-size:28px;
+    /* tạo mền mại cho nút */
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    /* hiệu ứng chuyển động */
+    transition:all 1s;
+  &:after,&:before{
+    content:" ";
+    width:10px;
+    height:10px;
+    position:absolute;
+    border :0px solid #fff;
+    transition:all 0.3s;
+    }
+  &:after{
+    top:-3px;
+    left:-3px;
+    border-top:1px solid white;
+    border-left:1px solid white;
+  }
+  &:before{
+    bottom:-3px;
+    right:-3px;
+    border-bottom:1px solid white;
+    border-right:1px solid white;
+  }
+  &:hover{
+    border-top-right-radius:0px;
+  border-bottom-left-radius:0px;
+   
+    &:before,&:after{
+      
+      width:100%;
+      height:100%;
+      
+    }
+  }
+}
+
+.menu a:hover {
+    background-color:pink; color: blue; 
+    transition: all 0.3s;
+}
+.leftcolum{
+    background-color:#fff;
+    float: left;
+    width: 75%;
+}
+.rightcolum{
+    float: left; 
+    width: 25%; 
+    padding-left: 20px;
+}
+.images{
+    width: 100%;
+    height: 200px; 
+}
+.card-news img{
+    display: block;
+    transition: all .3s ease;
+}
+.card-news img:hover{
+     transform: scale(1.3);
+}
+.card-news a{
+    display: block;
+    overflow: hidden;
+}
+.card-news{
+    width: 29.7%;
+    background-color:pink;
+    padding: 20px;
+    margin: 15px;
+    float: left;
+}
+.mota{
+    font-size: 21px;
+}
+.dexuat{
+    margin-left: 20px;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.card{
+    background-color: pink;
+    border: 1px solid yellow;
+
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.footer{
+    padding: 10px;
+    text-align:center;
+    background: black;
+    margin-top: 10px;
+    color:#fff;
+}
+.diachi{
+    padding-top: 20px;
+}
+.diachicuthe li{
+    font-size: 20px;
+}
+
+
+
+.social-container {
+    background-color: pink;
+    border: 1px solid yellow;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+   
+  }
+  
+  .social-container a {
+    background-color: white;
+    border: 1px solid red;
+    border-radius: 50%;
+    display: inline-flex;
+    /* căn chỉnh vb theo hướng ngang */
+    justify-content: center;
+    /* căn theo hướng dọc */
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .social-container a:hover {
+    border: 1px solid yellow;
+  }
+
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    font-size: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    padding-left: 2px;
+    margin-left: 170px;
+    margin-top: 42px;
+    border: 2px solid yellow;
+    text-align: center; /* Căn giữa nội dung */
+    
+}
+
+.submenu ul {
+    list-style: none; /* Loại bỏ các dấu chấm trong danh sách */
+    padding: 0;
+}
+
+.submenu ul li {
+    padding left: 8px; /* Thêm padding cho mỗi mục trong danh sách */
+}
+
+.menu ul li:hover .submenu {
+    font-size: 0px; /* Đặt lại font size nếu cần */
+    display: block;
+}
+.submenu ul li a {
+    font-size: 20px; /* Kích thước chữ mong muốn */
+}
+
+/* s */
+.sale {
+    display: none;
+    position: absolute;
+    background-color: pink;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    padding-left: 2px;
+    margin-left: 320px;
+    margin-top: 42px;
+    border: 2px solid yellow;
+    text-align: center; /* Căn giữa nội dung */
+    font-size: 10px;
+}
+
+.sale ul {
+    list-style: none; /* Loại bỏ các dấu chấm trong danh sách */
+    padding: 0;
+}
+
+.sale ul li {
+    padding left: 8px; /* Thêm padding cho mỗi mục trong danh sách */
+}
+
+.menu ul li:hover .sale {
+    font-size: 0px; /* Đặt lại font size nếu cần */
+    display: block;
+}
+.sale ul li a {
+    font-size: 22px; /* Kích thước chữ mong muốn */
+}
+/* TÊN WEB */
+.text-container>span{
+    font-family:"Baloo Thambi",cursive;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    animation: glow 3s ease-in-out infinite;
+    animation-delay: var(--delay);
+    background-color: black;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Điều này giúp chữ căn giữa theo chiều dọc */
+}
+/* tạo hiệu ứng nhấp nhô */
+@keyframes glow{
+    0%,
+    100%{
+        color: var(--color);
+        text-shadow: 0 0 10px #0652dd, 0 0 50px #0652dd, 0 0 100px #0652dd;
+    }
+    10%,
+    90%{
+        color: #111;
+        text-shadow: none;
+    }
+}
+.utc2{
+    text-decoration: none;
+}
